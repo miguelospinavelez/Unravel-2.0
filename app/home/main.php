@@ -78,7 +78,6 @@ if (isset($_POST['submit'])) {
     </section>
 
 
-
     <!-- home -->
 
     <section class="home">
@@ -122,7 +121,6 @@ if (isset($_POST['submit'])) {
     </section>
 
 
-
     <!-- benefits -->
 
     <section class="services">
@@ -156,7 +154,6 @@ if (isset($_POST['submit'])) {
     </section>
 
 
-
     <!-- about -->
 
     <section class="home-about">
@@ -176,7 +173,6 @@ if (isset($_POST['submit'])) {
     </section>
 
 
-
     <!-- archive -->
 
     <section class="home-packages">
@@ -191,7 +187,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="content">
                     <h3>Introduction to microdosing</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem, corrupti illo quis rerum facere! Voluptatum quibusdam debitis facere magni sunt error voluptas beatae commodi optio.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem.</p>
                     <a href="../archive/package.php" class="btn">Read</a>
                 </div>
             </div>
@@ -202,7 +198,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="content">
                     <h3>Studies on Psilocibin</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem, corrupti illo quis rerum facere! Voluptatum quibusdam debitis facere magni sunt error voluptas beatae commodi optio.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem.</p>
                     <a href="../archive/package.php" class="btn">Read</a>
                 </div>
             </div>
@@ -213,7 +209,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="content">
                     <h3>Meditation Vault</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem, corrupti illo quis rerum facere! Voluptatum quibusdam debitis facere magni sunt error voluptas beatae commodi optio.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem.</p>
                     <a href="../archive/package.php" class="btn">Read</a>
                 </div>
             </div>
@@ -224,7 +220,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="content">
                     <h3>mushrooms & fungi</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem, corrupti illo quis rerum facere! Voluptatum quibusdam debitis facere magni sunt error voluptas beatae commodi optio.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem.</p>
                     <a href="../archive/package.php" class="btn">Read</a>
                 </div>
             </div>
@@ -234,7 +230,6 @@ if (isset($_POST['submit'])) {
         <div class="load-more"><a href="../archive/package.php" class="btn">load more</a></div>
 
     </section>
-
 
 
     <!-- offer -->
@@ -247,7 +242,6 @@ if (isset($_POST['submit'])) {
             <a href="../products/book.php" class="btn">Starter Kit</a>
         </div>
     </section>
-
 
 
     <!-- footer -->
@@ -277,7 +271,7 @@ if (isset($_POST['submit'])) {
                 <a href="#"> <i class="fas fa-phone"></i> +123-456-7890</a>
                 <a href="#"> <i class="fas fa-phone"></i> +111-222-3333</a>
                 <a href="#"> <i class="fas fa-envelope"></i> contact@unravel.com</a>
-                <a href="#"> <i class="fas fa-map"></i> Envigado, Colombia - 050020 </a>
+                <a href="#"> <i class="fas fa-map"></i> Envigado, Colombia</a>
             </div>
 
             <div class="box">

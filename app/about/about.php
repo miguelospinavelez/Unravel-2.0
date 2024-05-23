@@ -47,15 +47,18 @@ if (isset($_GET['logout'])) {
     <section class="header">
 
         <a href="../home/home.php" class="logo">Unravel.</a>
+
         <nav class="navbar">
+
             <a href="../home/home.php">home</a>
             <a style="color:blueviolet; pointer-events: none;">about</a>
             <a href="../archive/package.php">archive</a>
             <a href="../products/book.php">products</a>
-            <a href="../index.php">Profile</a>
+            <a href="../user/index.php">Profile</a>
             <a href="about.php?logout=<?php echo $user_id; ?>" onclick="return confirm('are you sure you want to log out?')">exit</a>
+            
         </nav>
-        
+
         <div id="menu-btn" class="fas fa-bars"></div>
 
 
@@ -76,7 +79,7 @@ if (isset($_GET['logout'])) {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, voluptatem! Corrupti ipsum minus, eum, quam, recusandae ducimus similique cum magni voluptates tempora delectus autem debitis veniam nesciunt deserunt cupiditate dolor adipisci totam voluptas esse enim sed earum. Ratione id cupiditate cum placeat totam excepturi veniam voluptatum eligendi fugit labore! Harum placeat iusto officia, alias illum quo. Facere dolorem esse quibusdam assumenda et tempore, optio totam reprehenderit pariatur autem unde quos?</p>
 
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quia atque incidunt iure, fuga dolore perspiciatis tempora blanditiis odio itaque expedita voluptatibus totam, nostrum asperiores! Minus cupiditate quia fuga? Atque libero porro officia inventore. Dignissimos dolore totam neque consequuntur quos! Porro itaque ut fugiat, sint, earum necessitatibus iure aut deserunt perferendis veniam quidem qui perspiciatis vel. In asperiores facere incidunt iure error necessitatibus repellendus voluptas, dolor fugiat odit beatae deserunt ex? Libero voluptates quibusdam optio amet ducimus quaerat nesciunt, dolores, reiciendis voluptatibus quod totam sint facilis inventore tempore, voluptatum laudantium cumque temporibus eum nihil eius distinctio id. Aperiam, temporibus est!</p>
-            
+
             <div class="icons-container">
                 <div class="icons">
                     <i class="fas fa-map"></i>
@@ -165,58 +168,58 @@ if (isset($_GET['logout'])) {
     </section>
 
 
-     <!-- footer -->
+    <!-- footer -->
 
-     <section class="footer">
+    <section class="footer">
 
-<div class="box-container">
+        <div class="box-container">
 
-    <div class="box">
-        <h3>quick links</h3>
-        <a href="./home.php"> <i class="fas fa-angle-rig"></i>home</a>
-        <a href="../about/about.php"> <i class="fas fa-angle-rig"></i>about</a>
-        <a href="../archive/package.php"> <i class="fas fa-angle-rig"></i>archive</a>
-        <a href="../products/book.php"> <i class="fas fa-angle-rig"></i>products</a>
-    </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="./home.php"> <i class="fas fa-angle-rig"></i>home</a>
+                <a href="../about/about.php"> <i class="fas fa-angle-rig"></i>about</a>
+                <a href="../archive/package.php"> <i class="fas fa-angle-rig"></i>archive</a>
+                <a href="../products/book.php"> <i class="fas fa-angle-rig"></i>products</a>
+            </div>
 
-    <div class="box">
-        <h3>extra links</h3>
-        <a href="#"> <i class="fas fa-angle-right"></i>ask questions</a>
-        <a href="#"> <i class="fas fa-angle-right"></i>contact us</a>
-        <a href="#"> <i class="fas fa-angle-right"></i>privacy policy</a>
-        <a href="#"> <i class="fas fa-angle-right"></i>terms of use</a>
-    </div>
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"> <i class="fas fa-angle-right"></i>ask questions</a>
+                <a href="#"> <i class="fas fa-angle-right"></i>contact us</a>
+                <a href="#"> <i class="fas fa-angle-right"></i>privacy policy</a>
+                <a href="#"> <i class="fas fa-angle-right"></i>terms of use</a>
+            </div>
 
-    <div class="box">
-        <h3>contact info</h3>
-        <a href="#"> <i class="fas fa-phone"></i> +123-456-7890</a>
-        <a href="#"> <i class="fas fa-phone"></i> +111-222-3333</a>
-        <a href="#"> <i class="fas fa-envelope"></i> contact@unravel.com</a>
-        <a href="#"> <i class="fas fa-map"></i> Envigado, Colombia - 050020 </a>
-    </div>
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890</a>
+                <a href="#"> <i class="fas fa-phone"></i> +111-222-3333</a>
+                <a href="#"> <i class="fas fa-envelope"></i> contact@unravel.com</a>
+                <a href="#"> <i class="fas fa-map"></i> Envigado, Colombia</a>
+            </div>
 
-    <div class="box">
-        <h3>follow us</h3>
-        <a href="#"> <i class="fab fa-facebook-f"></i>facebook</a>
-        <a href="#"> <i class="fab fa-instagram"></i>instagram</a>
-        <a href="#"> <i class="fab fa-twitter"></i>twitter</a>
-        <a href="#"> <i class="fab fa-youtube"></i>youtube</a>
-    </div>
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i>facebook</a>
+                <a href="#"> <i class="fab fa-instagram"></i>instagram</a>
+                <a href="#"> <i class="fab fa-twitter"></i>twitter</a>
+                <a href="#"> <i class="fab fa-youtube"></i>youtube</a>
+            </div>
 
-</div>
+        </div>
 
-<div class="credit">
-    <p>© 2023 <span>Unravel.</span> | All rights reserved </p>
-</div>
-</section>
-
-
-    <!-- swiper js link -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- custom js file link -->
-    <script src="../js/script.js"></script>
+        <div class="credit">
+            <p>© 2023 <span>Unravel.</span> | All rights reserved </p>
+        </div>
+    </section>
 
 </body>
+
+
+<!-- swiper js link -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- custom js file link -->
+<script src="../js/script.js"></script>
 
 </html>

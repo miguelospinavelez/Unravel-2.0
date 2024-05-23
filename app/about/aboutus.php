@@ -208,7 +208,7 @@ if (isset($_POST['submit'])) {
                 <a href="#"> <i class="fas fa-phone"></i> +123-456-7890</a>
                 <a href="#"> <i class="fas fa-phone"></i> +111-222-3333</a>
                 <a href="#"> <i class="fas fa-envelope"></i> contact@unravel.com</a>
-                <a href="#"> <i class="fas fa-map"></i> Envigado, Colombia - 050020 </a>
+                <a href="#"> <i class="fas fa-map"></i> Envigado, Colombia</a>
             </div>
 
             <div class="box">
@@ -298,41 +298,43 @@ if (isset($_POST['submit'])) {
     <div class="modal" id="myModal2">
 
         <?php
-        if (isset($_POST['submit'])) {
-            $name = $_POST['name'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $cpassword = $_POST['cpassword'];
 
-            $errors = array();
+            if (isset($_POST['submit'])) {
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+                $cpassword = $_POST['cpassword'];
 
-            if (empty($name) || empty($email) || empty($password) || empty($cpassword)) {
-                $errors[] = 'All fields are required';
-            }
+                $errors = array();
 
-            if ($password !== $cpassword) {
-                $errors[] = 'Passwords do not match';
-            }
+                if (empty($name) || empty($email) || empty($password) || empty($cpassword)) {
+                    $errors[] = 'All fields are required';
+                }
 
-            if (empty($errors)) {
-                $stmt = $conn->prepare("SELECT * FROM user_form WHERE email = ?");
-                $stmt->bind_param("s", $email);
-                $stmt->execute();
-                $result = $stmt->get_result();
+                if ($password !== $cpassword) {
+                    $errors[] = 'Passwords do not match';
+                }
 
-                if ($result->num_rows > 0) {
-                    $errors[] = 'User already exists';
-                } else {
-                    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-
-                    $stmt = $conn->prepare("INSERT INTO user_form (name, email, password) VALUES (?, ?, ?)");
-                    $stmt->bind_param("sss", $name, $email, $hashedPassword);
+                if (empty($errors)) {
+                    $stmt = $conn->prepare("SELECT * FROM user_form WHERE email = ?");
+                    $stmt->bind_param("s", $email);
                     $stmt->execute();
+                    $result = $stmt->get_result();
 
-                    $success = 'Registered successfully';
+                    if ($result->num_rows > 0) {
+                        $errors[] = 'User already exists';
+                    } else {
+                        $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+                        $stmt = $conn->prepare("INSERT INTO user_form (name, email, password) VALUES (?, ?, ?)");
+                        $stmt->bind_param("sss", $name, $email, $hashedPassword);
+                        $stmt->execute();
+
+                        $success = 'Registered successfully';
+                    }
                 }
             }
-        }
+            
         ?>
 
         <div class="modal-content">
@@ -383,20 +385,22 @@ if (isset($_POST['submit'])) {
                     padding: .5rem 1.5rem;
                     cursor: pointer;
                     border-radius: 10px;" 
-                name="submit" 
+                name="submit"     
                 id="submit-registration">
 
                 <br>
 
-                <h3 id="backButton" style="
-                color: var(--main-color);
-                cursor: pointer;
-                justify-content: center;
-                text-align: center;
-                align-items: center;
-                align-content: center;
-                padding-top: 50px;
-                font-weight: normal;
+                <h3 
+                id="backButton" 
+                style="
+                    color: var(--main-color);
+                    cursor: pointer;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    align-content: center;
+                    padding-top: 50px;
+                    font-weight: normal;
                 ">Log in
                 </h3>
 

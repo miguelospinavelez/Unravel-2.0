@@ -41,7 +41,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 section {
-    padding: 5rem 10%;
+    padding: 2rem 5%;
 }
 
 @keyframes fadeIn {
@@ -328,7 +328,7 @@ section {
 .home-packages .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .home-packages .box-container .box {
@@ -960,8 +960,8 @@ section {
 
 .footer .box-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+    gap: 1rem;
 }
 
 .footer .box-container .box h3 {
@@ -989,9 +989,9 @@ section {
 
 .footer .credit {
     text-align: center;
-    padding-top: 3rem;
-    margin-top: 3rem;
-    border-top: 1rem solid var(--lightw-white);
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 2px solid var(--lightw-white);
     font-size: 2rem;
     color: var(--white);
 }
@@ -1031,18 +1031,32 @@ section {
         height: 48rem;
     }
 
+    .home-packages .box-container{
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+    }
+
     .products .cart-btn {
         top: 125px;
         font-size: 18px;
-    }
-
-    .modal-content{
-        margin: 14% auto;
     }
     
     .footer{
         background-image: url(./imgs/Footer.jpg);
     }
+
+    .footer .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 2fr));
+    }
+
+    .footer .box-container .box a i {
+        padding-right: 2rem;
+    }
+
+    
+    .modal-content{
+        margin: 14% auto;
+    }
+
 }
 
 

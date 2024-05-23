@@ -172,7 +172,7 @@ if (isset($_GET['logout'])) {
                 <a href="#"> <i class="fas fa-phone"></i> +123-456-7890</a>
                 <a href="#"> <i class="fas fa-phone"></i> +111-222-3333</a>
                 <a href="#"> <i class="fas fa-envelope"></i> contact@unravel.com</a>
-                <a href="#"> <i class="fas fa-map"></i> Medellín, Colombia - 050020 </a>
+                <a href="#"> <i class="fas fa-map"></i> Medellín, Colombia</a>
             </div>
 
             <div class="box">
