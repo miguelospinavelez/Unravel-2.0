@@ -78,8 +78,6 @@ if (isset($_POST['submit'])) {
     </section>
 
 
-
-
     <!-- archive -->
 
     <div class="heading" style="background: url(../imgs/bg/<?php echo (rand(3, 13)); ?>.png) no-repeat;)">
@@ -164,10 +162,6 @@ if (isset($_POST['submit'])) {
     </section>
 
 
-
-
-
-
     <!-- footer -->
 
     <section class="footer">
@@ -242,15 +236,20 @@ if (isset($_POST['submit'])) {
 
                 <br>
 
-                <input type="submit" value="Login" style="
-            margin-top: 3rem;
-            display: inline-block;
-            background-color: var(--main-color);
-            color: var(--white);
-            font-size: 1.5rem;
-            padding: .5rem 1.5rem;
-            cursor: pointer;
-            border-radius: 10px;" name="submit" id="submit">
+                <input 
+                type="submit" 
+                value="Login" 
+                style="
+                margin-top: 3rem;
+                display: inline-block;
+                background-color: var(--main-color);
+                color: var(--white);
+                font-size: 1.5rem;
+                padding: .5rem 1.5rem;
+                cursor: pointer;
+                border-radius: 10px;" 
+                name="submit" 
+                id="submit">
 
                 <br>
                 <br>
@@ -260,15 +259,16 @@ if (isset($_POST['submit'])) {
                 <br>
 
                 <h3 id="registerButton" style="
-            color: var(--main-color);
-            cursor: pointer;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            align-content: center;
-            padding-top: 50px;
-            font-weight: normal;
-            ">Sign up
+                color: var(--main-color);
+                cursor: pointer;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                align-content: center;
+                padding-top: 50px;
+                font-weight: normal;
+                ">
+                Sign up
                 </h3>
 
             </form>

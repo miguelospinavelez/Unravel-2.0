@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
         if (password_verify($password, $storedPassword)) {
             session_start();
             $_SESSION['user_id'] = $row['id'];
-            header('Location: about.php'); 
+            header('Location: about.php');
             exit;
         } else {
             $message[] = 'Incorrect password';
@@ -91,7 +91,7 @@ if (isset($_POST['submit'])) {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, voluptatem! Corrupti ipsum minus, eum, quam, recusandae ducimus similique cum magni voluptates tempora delectus autem debitis veniam nesciunt deserunt cupiditate dolor adipisci totam voluptas esse enim sed earum. Ratione id cupiditate cum placeat totam excepturi veniam voluptatum eligendi fugit labore! Harum placeat iusto officia, alias illum quo. Facere dolorem esse quibusdam assumenda et tempore, optio totam reprehenderit pariatur autem unde quos?</p>
 
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quia atque incidunt iure, fuga dolore perspiciatis tempora blanditiis odio itaque expedita voluptatibus totam, nostrum asperiores! Minus cupiditate quia fuga? Atque libero porro officia inventore. Dignissimos dolore totam neque consequuntur quos! Porro itaque ut fugiat, sint, earum necessitatibus iure aut deserunt perferendis veniam quidem qui perspiciatis vel. In asperiores facere incidunt iure error necessitatibus repellendus voluptas, dolor fugiat odit beatae deserunt ex? Libero voluptates quibusdam optio amet ducimus quaerat nesciunt, dolores, reiciendis voluptatibus quod totam sint facilis inventore tempore, voluptatum laudantium cumque temporibus eum nihil eius distinctio id. Aperiam, temporibus est!</p>
-            
+
             <div class="icons-container">
                 <div class="icons">
                     <i class="fas fa-map"></i>
@@ -181,220 +181,214 @@ if (isset($_POST['submit'])) {
     </section>
 
 
+    <!-- footer -->
 
-      <!-- footer -->
+    <section class="footer">
 
-      <section class="footer">
+        <div class="box-container">
 
-<div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="./home.php"> <i class="fas fa-angle-rig"></i>home</a>
+                <a href="../about/about.php"> <i class="fas fa-angle-rig"></i>about</a>
+                <a href="../archive/package.php"> <i class="fas fa-angle-rig"></i>archive</a>
+                <a href="../products/book.php"> <i class="fas fa-angle-rig"></i>products</a>
+            </div>
 
-    <div class="box">
-        <h3>quick links</h3>
-        <a href="./home.php"> <i class="fas fa-angle-rig"></i>home</a>
-        <a href="../about/about.php"> <i class="fas fa-angle-rig"></i>about</a>
-        <a href="../archive/package.php"> <i class="fas fa-angle-rig"></i>archive</a>
-        <a href="../products/book.php"> <i class="fas fa-angle-rig"></i>products</a>
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"> <i class="fas fa-angle-right"></i>ask questions</a>
+                <a href="#"> <i class="fas fa-angle-right"></i>contact us</a>
+                <a href="#"> <i class="fas fa-angle-right"></i>privacy policy</a>
+                <a href="#"> <i class="fas fa-angle-right"></i>terms of use</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890</a>
+                <a href="#"> <i class="fas fa-phone"></i> +111-222-3333</a>
+                <a href="#"> <i class="fas fa-envelope"></i> contact@unravel.com</a>
+                <a href="#"> <i class="fas fa-map"></i> Envigado, Colombia - 050020 </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i>facebook</a>
+                <a href="#"> <i class="fab fa-instagram"></i>instagram</a>
+                <a href="#"> <i class="fab fa-twitter"></i>twitter</a>
+                <a href="#"> <i class="fab fa-youtube"></i>youtube</a>
+            </div>
+
+        </div>
+
+        <div class="credit">
+            <p>© 2023 <span>Unravel.</span> | All rights reserved </p>
+        </div>
+    </section>
+
+
+    <!-- login modal -->
+
+    <div class="modal" id="myModal">
+
+        <div class="modal-content">
+
+            <h1>Log In</h1>
+
+            <?php
+            // if (isset($message)) {
+            //     foreach ($message as $message) {
+            //         echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
+            //     }
+            // }
+            ?>
+
+            <form action="" method="post">
+
+                <label for="email">Email:</label>
+                <input type="email" required placeholder="Email" name="email" id="email" style="text-transform: lowercase; background: none;">
+
+                <br>
+
+                <label for="password">Password:</label>
+                <input type="password" required placeholder="Password" name="password" id="password" style="background: none;">
+
+                <br>
+
+                <input type="submit" value="Login" style="
+                    margin-top: 3rem;
+                    display: inline-block;
+                    background-color: var(--main-color);
+                    color: var(--white);
+                    font-size: 1.5rem;
+                    padding: .5rem 1.5rem;
+                    cursor: pointer;
+                    border-radius: 10px;" name="submit" id="submit">
+
+                <br>
+                <br>
+
+                <a href="">Forgot your password?</a>
+
+                <br>
+
+                <h3 id="registerButton" style="
+                    color: var(--main-color);
+                    cursor: pointer;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    align-content: center;
+                    padding-top: 50px;
+                    font-weight: normal;
+                    ">Sign up
+                </h3>
+
+            </form>
+
+            <span class="close">&times;</span>
+
+        </div>
+
     </div>
 
-    <div class="box">
-        <h3>extra links</h3>
-        <a href="#"> <i class="fas fa-angle-right"></i>ask questions</a>
-        <a href="#"> <i class="fas fa-angle-right"></i>contact us</a>
-        <a href="#"> <i class="fas fa-angle-right"></i>privacy policy</a>
-        <a href="#"> <i class="fas fa-angle-right"></i>terms of use</a>
-    </div>
 
-    <div class="box">
-        <h3>contact info</h3>
-        <a href="#"> <i class="fas fa-phone"></i> +123-456-7890</a>
-        <a href="#"> <i class="fas fa-phone"></i> +111-222-3333</a>
-        <a href="#"> <i class="fas fa-envelope"></i> contact@unravel.com</a>
-        <a href="#"> <i class="fas fa-map"></i> Envigado, Colombia - 050020 </a>
-    </div>
+    <!-- register modal -->
 
-    <div class="box">
-        <h3>follow us</h3>
-        <a href="#"> <i class="fab fa-facebook-f"></i>facebook</a>
-        <a href="#"> <i class="fab fa-instagram"></i>instagram</a>
-        <a href="#"> <i class="fab fa-twitter"></i>twitter</a>
-        <a href="#"> <i class="fab fa-youtube"></i>youtube</a>
-    </div>
+    <div class="modal" id="myModal2">
 
-</div>
+        <?php
+        if (isset($_POST['submit'])) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $cpassword = $_POST['cpassword'];
 
-<div class="credit">
-    <p>© 2023 <span>Unravel.</span> | All rights reserved </p>
-</div>
-</section>
+            $errors = array();
 
+            if (empty($name) || empty($email) || empty($password) || empty($cpassword)) {
+                $errors[] = 'All fields are required';
+            }
 
-<!-- login modal -->
+            if ($password !== $cpassword) {
+                $errors[] = 'Passwords do not match';
+            }
 
-<div class="modal" id="myModal">
+            if (empty($errors)) {
+                $stmt = $conn->prepare("SELECT * FROM user_form WHERE email = ?");
+                $stmt->bind_param("s", $email);
+                $stmt->execute();
+                $result = $stmt->get_result();
 
-<div class="modal-content">
+                if ($result->num_rows > 0) {
+                    $errors[] = 'User already exists';
+                } else {
+                    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
-    <h1>Log In</h1>
+                    $stmt = $conn->prepare("INSERT INTO user_form (name, email, password) VALUES (?, ?, ?)");
+                    $stmt->bind_param("sss", $name, $email, $hashedPassword);
+                    $stmt->execute();
 
-    <?php
-    // if (isset($message)) {
-    //     foreach ($message as $message) {
-    //         echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
-    //     }
-    // }
-    ?>
-
-    <form action="" method="post">
-
-        <label for="email">Email:</label>
-        <input type="email" required placeholder="Email" name="email" id="email" style="text-transform: lowercase; background: none;">
-
-        <br>
-
-        <label for="password">Password:</label>
-        <input type="password" required placeholder="Password" name="password" id="password" style="background: none;">
-
-        <br>
-
-        <input 
-        type="submit" 
-        value="Login" 
-        style="
-            margin-top: 3rem;
-            display: inline-block;
-            background-color: var(--main-color);
-            color: var(--white);
-            font-size: 1.5rem;
-            padding: .5rem 1.5rem;
-            cursor: pointer;
-            border-radius: 10px;"
-         name="submit" 
-         id="submit">
-
-        <br>
-        <br>
-
-        <a href="">Forgot your password?</a>
-
-        <br>
-
-        <h3 id="registerButton" style="
-            color: var(--main-color);
-            cursor: pointer;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            align-content: center;
-            padding-top: 50px;
-            font-weight: normal;
-            ">Sign up
-        </h3>
-
-    </form>
-
-    <span class="close">&times;</span>
-
-</div>
-
-</div>
-
-
-<!-- register modal -->
-
-<div class="modal" id="myModal2">
-
-<?php
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $cpassword = $_POST['cpassword'];
-
-    $errors = array();
-
-    if (empty($name) || empty($email) || empty($password) || empty($cpassword)) {
-        $errors[] = 'All fields are required';
-    }
-
-    if ($password !== $cpassword) {
-        $errors[] = 'Passwords do not match';
-    }
-
-    if (empty($errors)) {
-        $stmt = $conn->prepare("SELECT * FROM user_form WHERE email = ?");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        if ($result->num_rows > 0) {
-            $errors[] = 'User already exists';
-        } else {
-            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-
-            $stmt = $conn->prepare("INSERT INTO user_form (name, email, password) VALUES (?, ?, ?)");
-            $stmt->bind_param("sss", $name, $email, $hashedPassword);
-            $stmt->execute();
-
-            $success = 'Registered successfully';
+                    $success = 'Registered successfully';
+                }
+            }
         }
-    }
-}
-?>
+        ?>
 
-<div class="modal-content">
+        <div class="modal-content">
 
-    <h1>Register</h1>
+            <h1>Register</h1>
 
-    <?php
-    // if (!empty($errors)) {
-    //     foreach ($errors as $error) {
-    //         echo '<div class="message" onclick="this.remove();">' . $error . '</div>';
-    //     }
-    // } elseif (isset($success)) {
-    //     echo '<div class="message" onclick="this.remove();">' . $success . '</div>';
-    // }
-    ?>
+            <?php
+            // if (!empty($errors)) {
+            //     foreach ($errors as $error) {
+            //         echo '<div class="message" onclick="this.remove();">' . $error . '</div>';
+            //     }
+            // } elseif (isset($success)) {
+            //     echo '<div class="message" onclick="this.remove();">' . $success . '</div>';
+            // }
+            ?>
 
-    <form action="" method="post">
+            <form action="" method="post">
 
-        <label for="register-name">Name:</label>
-        <input type="text" required placeholder="Enter your name" name="name" id="register-name" style="background: none;">
+                <label for="register-name">Name:</label>
+                <input type="text" required placeholder="Enter your name" name="name" id="register-name" style="background: none;">
 
-        <br>
+                <br>
 
-        <label for="register-email">Email:</label>
-        <input type="email" required placeholder="Enter your email" name="email" id="register-email" style="text-transform: lowercase; background: none">
+                <label for="register-email">Email:</label>
+                <input type="email" required placeholder="Enter your email" name="email" id="register-email" style="text-transform: lowercase; background: none">
 
-        <br>
+                <br>
 
-        <label for="register-password">Password:</label>
-        <input type="password" required placeholder="Set password" name="password" id="register-password" style="background: none;">
+                <label for="register-password">Password:</label>
+                <input type="password" required placeholder="Set password" name="password" id="register-password" style="background: none;">
 
-        <br>
+                <br>
 
-        <label for="cpassword">Confirm Password:</label>
-        <input type="password" required placeholder="Confirm password" name="cpassword" id="cpassword" style="background: none;">
+                <label for="cpassword">Confirm Password:</label>
+                <input type="password" required placeholder="Confirm password" name="cpassword" id="cpassword" style="background: none;">
 
-        <br>
+                <br>
 
-        <input 
-        type="submit" 
-        value="Submit" 
-        style="
-            margin-top: 3rem;
-            display: inline-block;
-            background-color: var(--main-color);
-            color: var(--white);
-            font-size: 1.5rem;
-            padding: .5rem 1.5rem;
-            cursor: pointer;
-            border-radius: 10px;"
-        name="submit" 
-        id="submit-registration">
+                <input 
+                type="submit" 
+                value="Submit" 
+                style="
+                    margin-top: 3rem;
+                    display: inline-block;
+                    background-color: var(--main-color);
+                    color: var(--white);
+                    font-size: 1.5rem;
+                    padding: .5rem 1.5rem;
+                    cursor: pointer;
+                    border-radius: 10px;" 
+                name="submit" 
+                id="submit-registration">
 
-        <br>
+                <br>
 
-        <h3 id="backButton" style="
+                <h3 id="backButton" style="
                 color: var(--main-color);
                 cursor: pointer;
                 justify-content: center;
@@ -404,15 +398,15 @@ if (isset($_POST['submit'])) {
                 padding-top: 50px;
                 font-weight: normal;
                 ">Log in
-        </h3>
+                </h3>
 
-    </form>
+            </form>
 
-    <span class="close2">&times;</span>
+            <span class="close2">&times;</span>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </body>
 
@@ -430,63 +424,63 @@ if (isset($_POST['submit'])) {
 <!-- modals script -->
 
 <script>
-var modal = document.getElementById('myModal');
-var closeButton = document.getElementsByClassName('close')[0];
-var modal2 = document.getElementById('myModal2');
-var closeButton2 = document.getElementsByClassName('close2')[0];
+    var modal = document.getElementById('myModal');
+    var closeButton = document.getElementsByClassName('close')[0];
+    var modal2 = document.getElementById('myModal2');
+    var closeButton2 = document.getElementsByClassName('close2')[0];
 
-var loginButton = document.getElementById('loginButton');
-var registerButton = document.getElementById('registerButton');
-var backButton = document.getElementById('backButton')
+    var loginButton = document.getElementById('loginButton');
+    var registerButton = document.getElementById('registerButton');
+    var backButton = document.getElementById('backButton')
 
-function openModal2() {
-modal2.style.display = 'block';
-modal.style.display = 'none';
-}
+    function openModal2() {
+        modal2.style.display = 'block';
+        modal.style.display = 'none';
+    }
 
-function closeModal2() {
-modal2.style.display = 'none';
-}
+    function closeModal2() {
+        modal2.style.display = 'none';
+    }
 
-registerButton.addEventListener('click', openModal2);
+    registerButton.addEventListener('click', openModal2);
 
-backButton.addEventListener('click', openModalAgain);
+    backButton.addEventListener('click', openModalAgain);
 
-closeButton2.addEventListener('click', closeModal2);
+    closeButton2.addEventListener('click', closeModal2);
 
-window.onclick = function(event) {
-if (event.target == modal2) {
-    modal2.style.display = 'none';
-} else if (event.target == modal) {
-    modal.style.display = 'none';
-}
-};
+    window.onclick = function(event) {
+        if (event.target == modal2) {
+            modal2.style.display = 'none';
+        } else if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
 
 
-function openModal() {
-modal.style.display = 'block';
-modal2.style.display = 'none';
-menu.classList.toggle('fa-times');
-navbar.classList.toggle('active');
-}
+    function openModal() {
+        modal.style.display = 'block';
+        modal2.style.display = 'none';
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+    }
 
-function openModalAgain() {
-modal.style.display = 'block';
-modal2.style.display = 'none';
-}
+    function openModalAgain() {
+        modal.style.display = 'block';
+        modal2.style.display = 'none';
+    }
 
-function openModalOnceMore() {
-modal.style.display = 'block';
-modal2.style.display = 'none';
-}
+    function openModalOnceMore() {
+        modal.style.display = 'block';
+        modal2.style.display = 'none';
+    }
 
-function closeModal() {
-modal.style.display = 'none';
-}
+    function closeModal() {
+        modal.style.display = 'none';
+    }
 
-loginButton.addEventListener('click', openModal);
+    loginButton.addEventListener('click', openModal);
 
-closeButton.addEventListener('click', closeModal);
+    closeButton.addEventListener('click', closeModal);
 </script>
 
 </html>
