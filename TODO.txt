@@ -2,18 +2,16 @@
 TASKS
 
 
--Register & login
 -Email confirmation
 -Lost password
 -Profile
 -Order form
--Product page
--Order confirmation email
 -Pay button modal
--Empty cart buttons hide 
--Back to store button
+-Empty cart button hide
 -Clear cart on payment
 -Stock info
+-Product page
+-Order confirmation email
 -Contact
 -User feedback
 -Multiple sessions fixes

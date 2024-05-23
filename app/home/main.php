@@ -5,6 +5,32 @@ if (isset($_SESSION['user_id'])) {
     header('location:home.php');
     exit;
 }
+
+
+if (isset($_POST['submit'])) {
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $password = $_POST['password'];
+
+    $stmt = mysqli_prepare($conn, "SELECT id, password FROM user_form WHERE email = ?");
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    if ($row = mysqli_fetch_assoc($result)) {
+        $storedPassword = $row['password'];
+
+        if (password_verify($password, $storedPassword)) {
+            session_start();
+            $_SESSION['user_id'] = $row['id'];
+            header('Location: home.php'); 
+            exit;
+        } else {
+            $message[] = 'Incorrect password';
+        }
+    } else {
+        $message[] = 'User not found';
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,11 +63,13 @@ if (isset($_SESSION['user_id'])) {
         <a href="./home.php" class="logo">Unravel.</a>
 
         <nav class="navbar">
+
             <a style="color:blueviolet; pointer-events: none;">home</a>
             <a href="../about/about.php">about</a>
             <a href="../archive/package.php">archive</a>
             <a href="../products/book.php">products</a>
             <a id="loginButton" style="cursor: pointer;">Log in</a>
+
         </nav>
 
         <div id="menu-btn" class="fas fa-bars"></div>
@@ -271,58 +299,68 @@ if (isset($_SESSION['user_id'])) {
     <!-- login modal -->
 
     <div class="modal" id="myModal">
-        <?php
-        if (isset($_POST['submit'])) {
-            $email = mysqli_real_escape_string($conn, $_POST['email']);
-            $password = $_POST['password'];
-
-            $stmt = mysqli_prepare($conn, "SELECT id, password FROM user_form WHERE email = ?");
-            mysqli_stmt_bind_param($stmt, "s", $email);
-            mysqli_stmt_execute($stmt);
-            $result = mysqli_stmt_get_result($stmt);
-
-            if ($row = mysqli_fetch_assoc($result)) {
-                $storedPassword = $row['password'];
-
-                // Verify the password using password_verify
-                if (password_verify($password, $storedPassword)) {
-                    session_start();
-                    $_SESSION['user_id'] = $row['id'];
-                } else {
-                    $message[] = 'Incorrect password';
-                }
-            } else {
-                $message[] = 'User not found';
-            }
-        }
-        ?>
+        
 
         <div class="modal-content">
 
             <h1>Log In</h1>
 
-            <a id="registerButton" style="cursor: pointer;">
-                Don't have an account? Sign up
-            </a>
-
             <?php
-            if (isset($message)) {
-                foreach ($message as $message) {
-                    echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
-                }
-            }
+            // if (isset($message)) {
+            //     foreach ($message as $message) {
+            //         echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
+            //     }
+            // }
             ?>
 
             <form action="" method="post">
+
                 <label for="email">Email:</label>
-                <input type="email" required placeholder="Email" name="email" id="email" style="text-transform: lowercase; background: none">
+                <input type="email" required placeholder="Email" name="email" id="email" style="text-transform: lowercase; background: none;">
+
                 <br>
+
                 <label for="password">Password:</label>
                 <input type="password" required placeholder="Password" name="password" id="password" style="background: none;">
+
                 <br>
-                <input type="submit" value="Log in" class="btn" name="submit" id="login">
+
+                <input 
+                type="submit" 
+                value="Login" 
+                style="
+                    margin-top: 3rem;
+                    display: inline-block;
+                    background-color: var(--main-color);
+                    color: var(--white);
+                    font-size: 1.5rem;
+                    padding: .5rem 1.5rem;
+                    cursor: pointer;
+                    border-radius: 10px;"
+                 name="submit" 
+                 id="submit">
+
+                <br>
+                <br>
+
+                <a href="">Forgot your password?</a>
+
+                <br>
+
+                <h3 id="registerButton" style="
+                    color: var(--main-color);
+                    cursor: pointer;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    align-content: center;
+                    padding-top: 50px;
+                    font-weight: normal;
+                    ">Sign up
+                </h3>
+
             </form>
-            <a href="">Forgot your password?</a>
+
             <span class="close">&times;</span>
 
         </div>
@@ -376,34 +414,67 @@ if (isset($_SESSION['user_id'])) {
 
             <h1>Register</h1>
 
-            <a id="backButton" style="cursor: pointer;">
-                Already have an account? Log in
-            </a>
-
             <?php
-            if (!empty($errors)) {
-                foreach ($errors as $error) {
-                    echo '<div class="message" onclick="this.remove();">' . $error . '</div>';
-                }
-            } elseif (isset($success)) {
-                echo '<div class="message" onclick="this.remove();">' . $success . '</div>';
-            }
+            // if (!empty($errors)) {
+            //     foreach ($errors as $error) {
+            //         echo '<div class="message" onclick="this.remove();">' . $error . '</div>';
+            //     }
+            // } elseif (isset($success)) {
+            //     echo '<div class="message" onclick="this.remove();">' . $success . '</div>';
+            // }
             ?>
 
             <form action="" method="post">
+
                 <label for="register-name">Name:</label>
                 <input type="text" required placeholder="Enter your name" name="name" id="register-name" style="background: none;">
+
                 <br>
+
                 <label for="register-email">Email:</label>
                 <input type="email" required placeholder="Enter your email" name="email" id="register-email" style="text-transform: lowercase; background: none">
+
                 <br>
+
                 <label for="register-password">Password:</label>
                 <input type="password" required placeholder="Set password" name="password" id="register-password" style="background: none;">
+
                 <br>
+
                 <label for="cpassword">Confirm Password:</label>
                 <input type="password" required placeholder="Confirm password" name="cpassword" id="cpassword" style="background: none;">
+
                 <br>
-                <input type="submit" value="Register now" class="btn" name="submit" id="submit-registration">
+
+                <input 
+                type="submit" 
+                value="Submit" 
+                style="
+                    margin-top: 3rem;
+                    display: inline-block;
+                    background-color: var(--main-color);
+                    color: var(--white);
+                    font-size: 1.5rem;
+                    padding: .5rem 1.5rem;
+                    cursor: pointer;
+                    border-radius: 10px;"
+                name="submit" 
+                id="submit-registration">
+
+                <br>
+
+                <h3 id="backButton" style="
+                        color: var(--main-color);
+                        cursor: pointer;
+                        justify-content: center;
+                        text-align: center;
+                        align-items: center;
+                        align-content: center;
+                        padding-top: 50px;
+                        font-weight: normal;
+                        ">Log in
+                </h3>
+
             </form>
 
             <span class="close2">&times;</span>
@@ -429,13 +500,13 @@ if (isset($_SESSION['user_id'])) {
 
 <script>
     var modal = document.getElementById('myModal');
-    var modal2 = document.getElementById('myModal2');
     var closeButton = document.getElementsByClassName('close')[0];
+    var modal2 = document.getElementById('myModal2');
     var closeButton2 = document.getElementsByClassName('close2')[0];
+
     var loginButton = document.getElementById('loginButton');
     var registerButton = document.getElementById('registerButton');
     var backButton = document.getElementById('backButton')
-    var submit = document.getElementById('login')
 
     function openModal2() {
         modal2.style.display = 'block';

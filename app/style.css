@@ -829,7 +829,7 @@ section {
     backdrop-filter: blur(5px);
 }
 
-.modal-content {
+.modal .modal-content {
     opacity: 0.9;
     border-radius: 10px;
     background-color: #ffd5d5;
@@ -842,11 +842,13 @@ section {
     position: relative;
     align-content: center;
     justify-content: center;
+    text-align: center;
 }
 
-.modal-content h1 {
+.modal-content h1{
     text-align: center;
-    font-size: 27px;
+    font-size: 35px;
+    padding-bottom: 2rem;
 }
 
 .modal-content h2{
@@ -858,13 +860,11 @@ section {
     text-align: center;
     align-content: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 .modal-content form .shipping,
-.modal-content form .contact-info,
-.modal-content form .login,
-.modal-content form .register{
+.modal-content form .contact-info{
     text-align: left;
 }
 
@@ -901,55 +901,6 @@ section {
 
 /* LOGIN/REGISTRATION */
 
-/* .login {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(5px);
-}
-
-.login-content {
-    opacity: 0.9;
-    border-radius: 10px;
-    background-color: #ffd5d5;
-    margin: 12% auto;
-    padding: 15px;
-    box-shadow: var(--box-shadow);
-    width: 80%;
-    max-width: 450px;
-    min-height: 450px;
-    position: relative;
-    align-content: center;
-    justify-content: center;
-}
-
-.login-content h1 {
-    text-align: center;
-    font-size: 27px;
-}
-
-.login-content h2{
-    font-size: 20px;
-}
-
-.login-content form {
-    padding: 1.5rem;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    font-size: 15px;
-}
-
-.login-content form .login,
-.login-content form .register{
-    text-align: left;
-}
-
-*/
 
 .close2 {
     position: absolute;

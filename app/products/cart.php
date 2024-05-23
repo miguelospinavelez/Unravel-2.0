@@ -215,37 +215,36 @@ if (isset($_GET['delete_all'])) {
 
                         <br>
 
-                        <label class="box" for="zip"><b>ZIP</b> : </label>
+                        <label for="zip"><b>ZIP</b> : </label>
 
                         <input required type="text" style="background: none;" name="zip" id="zip" value="<?php echo $fetch_user['zip']; ?>">
 
                         <br>
 
-                        <label class="box" for="address"><b>address</b> : </label>
+                        <label for="address"><b>address</b> : </label>
 
                         <input required type="text" name="address" style="width: 34rem; background: none;" id="address" value="<?php echo $fetch_user['address']; ?>">
 
                         <br>
 
-                        <label class="box" for="city"><b>city </b>: </label>
+                        <label for="city"><b>city </b>: </label>
 
                         <input required style="background: none;" type="text" id="city" name="city" value="<?php echo $fetch_user['city']; ?>">
 
                         <br>
 
-                        <label class="box" for="state"><b>state</b> : </label>
+                        <label for="state"><b>state</b> : </label>
 
                         <input required style="background: none;" type="text" id="state" name="state" value="<?php echo $fetch_user['state']; ?>">
 
                         <br>
 
-                        <label class="box" for="country"><b>Country</b> : </label>
+                        <label for="country"><b>Country</b> : </label>
 
                         <input required style="background: none;" type="text" id="country" name="country" value="<?php echo $fetch_user['country']; ?>">
 
                         <br>
                         
-
                     </div>
 
                     <label for="shipment-address"><b>Use this address : </b></label>
