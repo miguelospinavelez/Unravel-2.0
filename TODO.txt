@@ -1,0 +1,41 @@
+
+TASKS
+
+
+-Register & login
+-Email confirmation
+-Lost password
+-Profile
+-Order form
+-Product page
+-Order confirmation email
+-Pay button modal
+-Empty cart buttons hide 
+-Back to store button
+-Clear cart on payment
+-Stock info
+-Contact
+-User feedback
+-Multiple sessions fixes
+-Footer fixes
+-Style fixes
+-Block access to config.php and other PHP files
+-Prevent defaults
+-Imgs sizes and preload
+-Dark mode
+-Browsers & devices verification
+-Cookies
+-Additional APIs
+-Currencies 
+-Terms of use
+-Privacy policy
+-Legal compliance & disclaimer
+-404
+-Site map
+-Languages
+-Testing & debugging
+-Security check
+
+
+
+

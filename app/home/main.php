@@ -1,0 +1,490 @@
+<?php
+include '../config.php';
+session_start();
+if (isset($_SESSION['user_id'])) {
+    header('location:home.php');
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Unravel. | Microdosing & Mushroom Cultivation </title>
+
+    <!-- favicon link -->
+    <link rel="icon" type="image/x-icon" href="../imgs/icons/favicon.ico">
+
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--custom css-->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <!-- header -->
+
+    <section class="header">
+
+        <a href="./home.php" class="logo">Unravel.</a>
+
+        <nav class="navbar">
+            <a style="color:blueviolet; pointer-events: none;">home</a>
+            <a href="../about/about.php">about</a>
+            <a href="../archive/package.php">archive</a>
+            <a href="../products/book.php">products</a>
+            <a id="loginButton" style="cursor: pointer;">Log in</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+
+    </section>
+
+
+
+    <!-- home -->
+
+    <section class="home">
+
+        <div class="swiper home-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide" style="background-image: url(../imgs/fungi.jpg);">
+                    <div class="content">
+                        <span>discover, heal, connect</span>
+                        <h3>integrate the power of mushrooms into your life</h3>
+                        <a href="../products/book.php" class="btn">discover more</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background-image:url(../imgs/heal.jpg)">
+                    <div class="content">
+                        <span>discover, heal, connect</span>
+                        <h3>unravel your self</h3>
+                        <a href="../products/book.php" class="btn">discover more</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background-image:url(../imgs/couple-cover-image-holding-hands.jpg)">
+                    <div class="content">
+                        <span>discover, heal, connect</span>
+                        <h3>connect with those you love</h3>
+                        <a href="../products/book.php" class="btn">discover more</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        </div>
+    </section>
+
+
+
+    <!-- benefits -->
+
+    <section class="services">
+
+        <h1 class="heading-title">take the next step</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="" alt="">
+                <h3>Explore</h3>
+            </div>
+
+            <div class="box">
+                <img src="" alt="">
+                <h3>Heal</h3>
+            </div>
+
+            <div class="box">
+                <img src="" alt="">
+                <h3>Connect</h3>
+            </div>
+
+            <div class="box">
+                <img src="" alt="">
+                <h3>Grow</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- about -->
+
+    <section class="home-about">
+
+        <div class="content">
+
+            <h3>about us</h3>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti quod ipsam totam, itaque vero vel aut optio ad harum laudantium? Voluptatem architecto eaque veniam nisi, voluptates fuga dignissimos praesentium illum eveniet. Minima sit expedita dolorum excepturi similique nam, maiores, accusamus tempore eveniet molestiae facilis. Facere possimus sit accusantium at.
+            </p>
+
+            <a href="../about/about.php" class="btn">read more</a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- archive -->
+
+    <section class="home-packages">
+
+        <h1 class="heading-title"> articles & studies </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="../imgs/micr.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Introduction to microdosing</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem, corrupti illo quis rerum facere! Voluptatum quibusdam debitis facere magni sunt error voluptas beatae commodi optio.</p>
+                    <a href="../archive/package.php" class="btn">Read</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../imgs/labs.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Studies on Psilocibin</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem, corrupti illo quis rerum facere! Voluptatum quibusdam debitis facere magni sunt error voluptas beatae commodi optio.</p>
+                    <a href="../archive/package.php" class="btn">Read</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../imgs/meditation.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Meditation Vault</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem, corrupti illo quis rerum facere! Voluptatum quibusdam debitis facere magni sunt error voluptas beatae commodi optio.</p>
+                    <a href="../archive/package.php" class="btn">Read</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="../imgs/mushrms.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>mushrooms & fungi</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eveniet sequi omnis ipsam exercitationem, corrupti illo quis rerum facere! Voluptatum quibusdam debitis facere magni sunt error voluptas beatae commodi optio.</p>
+                    <a href="../archive/package.php" class="btn">Read</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="load-more"><a href="../archive/package.php" class="btn">load more</a></div>
+
+    </section>
+
+
+
+    <!-- offer -->
+
+    <section class="home-offer">
+        <div class="content">
+            <h3>Grow your own mushrooms</h3>
+            <img src="../imgs/growbox.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero vel voluptatem ea nam maxime porro deserunt aspernatur voluptatibus, quia odio.</p>
+            <a href="../products/book.php" class="btn">Starter Kit</a>
+        </div>
+    </section>
+
+
+
+    <!-- footer -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="./home.php"> <i class="fas fa-angle-rig"></i>home</a>
+                <a href="../about/about.php"> <i class="fas fa-angle-rig"></i>about</a>
+                <a href="../archive/package.php"> <i class="fas fa-angle-rig"></i>archive</a>
+                <a href="../products/book.php"> <i class="fas fa-angle-rig"></i>products</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#"> <i class="fas fa-angle-right"></i>ask questions</a>
+                <a href="#"> <i class="fas fa-angle-right"></i>contact us</a>
+                <a href="#"> <i class="fas fa-angle-right"></i>privacy policy</a>
+                <a href="#"> <i class="fas fa-angle-right"></i>terms of use</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890</a>
+                <a href="#"> <i class="fas fa-phone"></i> +111-222-3333</a>
+                <a href="#"> <i class="fas fa-envelope"></i> contact@unravel.com</a>
+                <a href="#"> <i class="fas fa-map"></i> Envigado, Colombia - 050020 </a>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i>facebook</a>
+                <a href="#"> <i class="fab fa-instagram"></i>instagram</a>
+                <a href="#"> <i class="fab fa-twitter"></i>twitter</a>
+                <a href="#"> <i class="fab fa-youtube"></i>youtube</a>
+            </div>
+
+        </div>
+
+        <div class="credit">
+            <p>© 2023 <span>Unravel.</span> | All rights reserved </p>
+        </div>
+    </section>
+
+
+    <!-- login modal -->
+
+    <div class="modal" id="myModal">
+        <?php
+        if (isset($_POST['submit'])) {
+            $email = mysqli_real_escape_string($conn, $_POST['email']);
+            $password = $_POST['password'];
+
+            $stmt = mysqli_prepare($conn, "SELECT id, password FROM user_form WHERE email = ?");
+            mysqli_stmt_bind_param($stmt, "s", $email);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
+
+            if ($row = mysqli_fetch_assoc($result)) {
+                $storedPassword = $row['password'];
+
+                // Verify the password using password_verify
+                if (password_verify($password, $storedPassword)) {
+                    session_start();
+                    $_SESSION['user_id'] = $row['id'];
+                } else {
+                    $message[] = 'Incorrect password';
+                }
+            } else {
+                $message[] = 'User not found';
+            }
+        }
+        ?>
+
+        <div class="modal-content">
+
+            <h1>Log In</h1>
+
+            <a id="registerButton" style="cursor: pointer;">
+                Don't have an account? Sign up
+            </a>
+
+            <?php
+            if (isset($message)) {
+                foreach ($message as $message) {
+                    echo '<div class="message" onclick="this.remove();">' . $message . '</div>';
+                }
+            }
+            ?>
+
+            <form action="" method="post">
+                <label for="email">Email:</label>
+                <input type="email" required placeholder="Email" name="email" id="email" style="text-transform: lowercase; background: none">
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" required placeholder="Password" name="password" id="password" style="background: none;">
+                <br>
+                <input type="submit" value="Log in" class="btn" name="submit" id="login">
+            </form>
+            <a href="">Forgot your password?</a>
+            <span class="close">&times;</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- register modal -->
+
+    <div class="modal" id="myModal2">
+
+        <?php
+        if (isset($_POST['submit'])) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $cpassword = $_POST['cpassword'];
+
+            $errors = array();
+
+            if (empty($name) || empty($email) || empty($password) || empty($cpassword)) {
+                $errors[] = 'All fields are required';
+            }
+
+            if ($password !== $cpassword) {
+                $errors[] = 'Passwords do not match';
+            }
+
+            if (empty($errors)) {
+                $stmt = $conn->prepare("SELECT * FROM user_form WHERE email = ?");
+                $stmt->bind_param("s", $email);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result->num_rows > 0) {
+                    $errors[] = 'User already exists';
+                } else {
+                    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+                    $stmt = $conn->prepare("INSERT INTO user_form (name, email, password) VALUES (?, ?, ?)");
+                    $stmt->bind_param("sss", $name, $email, $hashedPassword);
+                    $stmt->execute();
+
+                    $success = 'Registered successfully';
+                }
+            }
+        }
+        ?>
+
+        <div class="modal-content">
+
+            <h1>Register</h1>
+
+            <a id="backButton" style="cursor: pointer;">
+                Already have an account? Log in
+            </a>
+
+            <?php
+            if (!empty($errors)) {
+                foreach ($errors as $error) {
+                    echo '<div class="message" onclick="this.remove();">' . $error . '</div>';
+                }
+            } elseif (isset($success)) {
+                echo '<div class="message" onclick="this.remove();">' . $success . '</div>';
+            }
+            ?>
+
+            <form action="" method="post">
+                <label for="register-name">Name:</label>
+                <input type="text" required placeholder="Enter your name" name="name" id="register-name" style="background: none;">
+                <br>
+                <label for="register-email">Email:</label>
+                <input type="email" required placeholder="Enter your email" name="email" id="register-email" style="text-transform: lowercase; background: none">
+                <br>
+                <label for="register-password">Password:</label>
+                <input type="password" required placeholder="Set password" name="password" id="register-password" style="background: none;">
+                <br>
+                <label for="cpassword">Confirm Password:</label>
+                <input type="password" required placeholder="Confirm password" name="cpassword" id="cpassword" style="background: none;">
+                <br>
+                <input type="submit" value="Register now" class="btn" name="submit" id="submit-registration">
+            </form>
+
+            <span class="close2">&times;</span>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+<!-- swiper js link -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+<!-- custom js file link -->
+
+<script src="../js/script.js"></script>
+
+
+<!-- modals script -->
+
+<script>
+    var modal = document.getElementById('myModal');
+    var modal2 = document.getElementById('myModal2');
+    var closeButton = document.getElementsByClassName('close')[0];
+    var closeButton2 = document.getElementsByClassName('close2')[0];
+    var loginButton = document.getElementById('loginButton');
+    var registerButton = document.getElementById('registerButton');
+    var backButton = document.getElementById('backButton')
+    var submit = document.getElementById('login')
+
+    function openModal2() {
+        modal2.style.display = 'block';
+        modal.style.display = 'none';
+    }
+
+    function closeModal2() {
+        modal2.style.display = 'none';
+    }
+
+    registerButton.addEventListener('click', openModal2);
+
+    backButton.addEventListener('click', openModalAgain);
+
+    closeButton2.addEventListener('click', closeModal2);
+
+    window.onclick = function(event) {
+        if (event.target == modal2) {
+            modal2.style.display = 'none';
+        } else if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+
+    function openModal() {
+        modal.style.display = 'block';
+        modal2.style.display = 'none';
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+    }
+
+    function openModalAgain() {
+        modal.style.display = 'block';
+        modal2.style.display = 'none';
+    }
+
+    function openModalOnceMore() {
+        modal.style.display = 'block';
+        modal2.style.display = 'none';
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+    }
+
+    loginButton.addEventListener('click', openModal);
+
+    closeButton.addEventListener('click', closeModal);
+</script>
+
+</html>
