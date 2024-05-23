@@ -165,50 +165,50 @@ if (isset($_GET['logout'])) {
     </section>
 
 
-    <!-- footer -->
+     <!-- footer -->
 
-    <section class="footer">
+     <section class="footer">
 
-        <div class="box-container">
+<div class="box-container">
 
-            <div class="box">
-                <h3>quick links</h3>
-                <a href="../home/home.php"> <i class="fas fa-angle-rig"></i>home</a>
-                <a href="../about/about.php"> <i class="fas fa-angle-rig"></i>about</a>
-                <a href="../archive/package.php"> <i class="fas fa-angle-rig"></i>archive</a>
-                <a href="../products/book.php"> <i class="fas fa-angle-rig"></i>products</a>
-            </div>
+    <div class="box">
+        <h3>quick links</h3>
+        <a href="./home.php"> <i class="fas fa-angle-rig"></i>home</a>
+        <a href="../about/about.php"> <i class="fas fa-angle-rig"></i>about</a>
+        <a href="../archive/package.php"> <i class="fas fa-angle-rig"></i>archive</a>
+        <a href="../products/book.php"> <i class="fas fa-angle-rig"></i>products</a>
+    </div>
 
-            <div class="box">
-                <h3>extra links</h3>
-                <a href="#"> <i class="fas fa-angle-right"></i>ask questions</a>
-                <a href="#"> <i class="fas fa-angle-right"></i>Contact us</a>
-                <a href="#"> <i class="fas fa-angle-right"></i>privacy policy</a>
-                <a href="#"> <i class="fas fa-angle-right"></i>terms of use</a>
-            </div>
+    <div class="box">
+        <h3>extra links</h3>
+        <a href="#"> <i class="fas fa-angle-right"></i>ask questions</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>contact us</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>privacy policy</a>
+        <a href="#"> <i class="fas fa-angle-right"></i>terms of use</a>
+    </div>
 
-            <div class="box">
-                <h3>contact info</h3>
-                <a href="#"> <i class="fas fa-phone"></i> +123-456-7890</a>
-                <a href="#"> <i class="fas fa-phone"></i> +111-222-3333</a>
-                <a href="#"> <i class="fas fa-envelope"></i> contact@unravel.com</a>
-                <a href="#"> <i class="fas fa-map"></i> Medellín, Colombia - 050020 </a>
-            </div>
+    <div class="box">
+        <h3>contact info</h3>
+        <a href="#"> <i class="fas fa-phone"></i> +123-456-7890</a>
+        <a href="#"> <i class="fas fa-phone"></i> +111-222-3333</a>
+        <a href="#"> <i class="fas fa-envelope"></i> contact@unravel.com</a>
+        <a href="#"> <i class="fas fa-map"></i> Envigado, Colombia - 050020 </a>
+    </div>
 
-            <div class="box">
-                <h3>follow us</h3>
-                <a href="#"> <i class="fab fa-facebook-f"></i>facebook</a>
-                <a href="#"> <i class="fab fa-instagram"></i>instagram</a>
-                <a href="#"> <i class="fab fa-twitter"></i>twitter</a>
-                <a href="#"> <i class="fab fa-youtube"></i>youtube</a>
-            </div>
+    <div class="box">
+        <h3>follow us</h3>
+        <a href="#"> <i class="fab fa-facebook-f"></i>facebook</a>
+        <a href="#"> <i class="fab fa-instagram"></i>instagram</a>
+        <a href="#"> <i class="fab fa-twitter"></i>twitter</a>
+        <a href="#"> <i class="fab fa-youtube"></i>youtube</a>
+    </div>
 
-        </div>
+</div>
 
-        <div class="credit">
-            <p>© 2021 Unravel. All rights reserved | Created by <span>Myself</span> Web Design</p>
-        </div>
-    </section>
+<div class="credit">
+    <p>© 2023 <span>Unravel.</span> | All rights reserved </p>
+</div>
+</section>
 
 
     <!-- swiper js link -->

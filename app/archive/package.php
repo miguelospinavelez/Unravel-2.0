@@ -62,7 +62,7 @@ if (isset($_GET['logout'])) {
 
     <!-- archive -->
 
-    <div class="heading" style="background: url(../imgs/bg/<?php echo (rand(1, 16)); ?>.png) no-repeat;">
+    <div class="heading" style="background: url(../imgs/bg/<?php echo (rand(3, 13)); ?>.png) no-repeat;">
         <h1>Archive</h1>
     </div>
 

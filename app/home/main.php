@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
         if (password_verify($password, $storedPassword)) {
             session_start();
             $_SESSION['user_id'] = $row['id'];
-            header('Location: home.php'); 
+            header('Location: home.php');
             exit;
         } else {
             $message[] = 'Incorrect password';
@@ -299,7 +299,7 @@ if (isset($_POST['submit'])) {
     <!-- login modal -->
 
     <div class="modal" id="myModal">
-        
+
 
         <div class="modal-content">
 
@@ -325,10 +325,7 @@ if (isset($_POST['submit'])) {
 
                 <br>
 
-                <input 
-                type="submit" 
-                value="Login" 
-                style="
+                <input type="submit" value="Login" style="
                     margin-top: 3rem;
                     display: inline-block;
                     background-color: var(--main-color);
@@ -336,9 +333,7 @@ if (isset($_POST['submit'])) {
                     font-size: 1.5rem;
                     padding: .5rem 1.5rem;
                     cursor: pointer;
-                    border-radius: 10px;"
-                 name="submit" 
-                 id="submit">
+                    border-radius: 10px;" name="submit" id="submit">
 
                 <br>
                 <br>
@@ -446,10 +441,7 @@ if (isset($_POST['submit'])) {
 
                 <br>
 
-                <input 
-                type="submit" 
-                value="Submit" 
-                style="
+                <input type="submit" value="Submit" style="
                     margin-top: 3rem;
                     display: inline-block;
                     background-color: var(--main-color);
@@ -457,9 +449,7 @@ if (isset($_POST['submit'])) {
                     font-size: 1.5rem;
                     padding: .5rem 1.5rem;
                     cursor: pointer;
-                    border-radius: 10px;"
-                name="submit" 
-                id="submit-registration">
+                    border-radius: 10px;" name="submit" id="submit-registration">
 
                 <br>
 
